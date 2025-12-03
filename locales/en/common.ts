@@ -47,21 +47,29 @@ export const en = {
     form: {
       nameLabel: "Name",
       emailLabel: "Email",
+      subjectLabel: "Subject",
+      companyLabel: "Company",
+      phoneLabel: "Phone",
       messageLabel: "Message",
-      submitLabel: "Send message"
+      submitLabel: "Send message",
+      sendingLabel: "Sending..."
     },
     placeholders: {
       name: "Marvin",
       email: "you@example.com",
+      subject: "Project opportunity",
+      company: "Company or team",
+      phone: "+1 (555) 123-4567",
       message: "Tell me about your idea..."
     },
     details: {
-      emailLabel: "Henrique Padueli",
+      emailLabel: "Email",
       emailValue: "henriquepaduelim@icloud.com",
       linkedinLabel: "LinkedIn",
       linkedinValue: "linkedin.com/in/henriquepadueli"
     },
-    submitted: "Submitted!"
+    submitted: "Message sent. Thank you!",
+    failed: "Something went wrong. Please try again."
   },
   footer: {
     note: "Built with Next.js, Tailwind CSS, and Framer Motion.",
@@ -87,6 +95,9 @@ export const en = {
     errors: {
       name: "Please add your name.",
       email: "Enter a valid email address.",
+      subject: "Subject is too long.",
+      company: "Company is too long.",
+      phone: "Phone is too long.",
       message: "Write a short message."
     }
   },
