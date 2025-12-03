@@ -51,15 +51,15 @@ export const pt = {
       submitLabel: "Enviar mensagem"
     },
     placeholders: {
-      name: "Seu nome",
+      name: "Marvin ",
       email: "voce@exemplo.com",
       message: "Conte sua ideia..."
     },
     details: {
-      emailLabel: "E-mail",
-      emailValue: "hello@example.com",
+      emailLabel: "Henrique Padueli",
+      emailValue: "henriquepaduelim@icloud.com",
       linkedinLabel: "LinkedIn",
-      linkedinValue: "linkedin.com/in/henriquemachado"
+      linkedinValue: "linkedin.com/in/henriquepadueli"
     },
     submitted: "Enviado!"
   },
