@@ -32,7 +32,7 @@ export default function ContactSection() {
   const validate = (): FormErrors => {
     const nextErrors: FormErrors = {};
     if (!form.name.trim()) nextErrors.name = t.form.errors.name;
-    if (!form.email.match(/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/)) nextErrors.email = t.form.errors.email;
+    if (!form.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) nextErrors.email = t.form.errors.email;
     if (form.message.trim().length < 5) nextErrors.message = t.form.errors.message;
     if (form.subject.trim().length > 200) nextErrors.subject = t.form.errors.subject;
     if (form.company.trim().length > 160) nextErrors.company = t.form.errors.company;
