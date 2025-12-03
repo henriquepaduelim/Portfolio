@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { getDb } from "@/lib/db";
-import { Resend } from "resend";
+import sendgrid from "@sendgrid/mail";
 
 const contactSchema = z.object({
   name: z.string().min(2).max(120),
@@ -12,11 +12,13 @@ const contactSchema = z.object({
   phone: z.string().max(80).optional()
 });
 
-const resendApiKey = process.env.RESEND_API_KEY;
-const resendFrom = process.env.RESEND_FROM_EMAIL;
-const contactTo = process.env.CONTACT_TO_EMAIL || "henriquepaduelim@icloud.com";
+const sendgridApiKey = process.env.SENDGRID_API_KEY;
+const emailFrom = process.env.EMAIL_FROM;
+const contactTo = process.env.CONTACT_TO_EMAIL || emailFrom;
 
-const resend = resendApiKey ? new Resend(resendApiKey) : null;
+if (sendgridApiKey) {
+  sendgrid.setApiKey(sendgridApiKey);
+}
 
 export async function POST(req: Request) {
   const json = await req.json().catch(() => null);
@@ -51,13 +53,13 @@ export async function POST(req: Request) {
   }
 
   // Fire-and-forget email; don't block response if email isn't configured.
-  if (resend && resendFrom) {
+  if (sendgridApiKey && emailFrom && contactTo) {
     try {
-      await resend.emails.send({
-        from: resendFrom,
+      await sendgrid.send({
         to: contactTo,
+        from: emailFrom,
+        replyTo: payload.email,
         subject: payload.subject || `New contact from ${payload.name}`,
-        reply_to: [payload.email],
         text: buildPlainText(payload),
         html: buildHtml(payload)
       });
