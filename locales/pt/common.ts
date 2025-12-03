@@ -9,8 +9,8 @@ export const pt = {
     brandTag: "Portfólio"
   },
   hero: {
-    greeting: "Olá, eu sou",
-    name: "Henrique Machado",
+    greeting: "Olá, me chamo",
+    name: "Henrique Padueli",
     title: "Desenvolvedor Full-stack",
     subtitle: "Construo produtos digitais responsivos e humanos, com UX cuidadosa e engenharia confiável.",
     primaryCta: "Ver projetos",

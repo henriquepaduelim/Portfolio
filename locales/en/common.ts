@@ -10,7 +10,7 @@ export const en = {
   },
   hero: {
     greeting: "Hello, I'm",
-    name: "Henrique Machado",
+    name: "Henrique Padueli",
     title: "Full-stack Developer",
     subtitle: "I build responsive, human-friendly digital products with thoughtful UX and reliable engineering.",
     primaryCta: "View projects",

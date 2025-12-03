@@ -13,22 +13,16 @@ type ThemeContextValue = {
 const STORAGE_KEY = "hp_theme";
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
+function getInitialTheme(): Theme {
+  if (typeof window === "undefined") return "dark";
+  const stored = localStorage.getItem(STORAGE_KEY) as Theme | null;
+  if (stored === "light" || stored === "dark") return stored;
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  return prefersDark ? "dark" : "light";
+}
+
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("dark");
-
-  useEffect(() => {
-    const stored = typeof window !== "undefined" ? (localStorage.getItem(STORAGE_KEY) as Theme | null) : null;
-    if (stored === "light" || stored === "dark") {
-      setTheme(stored);
-      updateDocumentTheme(stored);
-      return;
-    }
-
-    const prefersDark = typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initial = prefersDark ? "dark" : "light";
-    setTheme(initial);
-    updateDocumentTheme(initial);
-  }, []);
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
 
   useEffect(() => {
     updateDocumentTheme(theme);

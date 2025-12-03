@@ -2,8 +2,8 @@
 
 import clsx from "clsx";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import type { ComponentPropsWithRef, ReactNode } from "react";
+import { motion, type MotionProps } from "framer-motion";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 type Variant = "primary" | "secondary" | "ghost";
 
@@ -12,7 +12,8 @@ type ButtonProps = {
   href?: string;
   variant?: Variant;
   className?: string;
-} & ComponentPropsWithRef<"button">;
+} & ButtonHTMLAttributes<HTMLButtonElement> &
+  Pick<MotionProps, "whileHover" | "whileTap" | "transition" | "whileFocus" | "onTap">;
 
 const variants: Record<Variant, string> = {
   primary:
@@ -39,8 +40,17 @@ export default function Button({ children, href, variant = "primary", className,
     );
   }
 
+  // Framer's MotionProps conflicts with native drag handlers; cast to relax type expectations.
+  const motionProps = props as MotionProps & ButtonHTMLAttributes<HTMLButtonElement>;
+
   return (
-    <motion.button whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} className={classes} {...props}>
+    <motion.button
+      whileHover={{ y: -2 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ type: "spring", stiffness: 220, damping: 18 }}
+      className={classes}
+      {...motionProps}
+    >
       {children}
     </motion.button>
   );
