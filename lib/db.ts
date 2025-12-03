@@ -13,6 +13,10 @@ export function getDb() {
 
   globalPool = new Pool({
     connectionString,
+    ssl: {
+      // Required by most hosted Postgres providers (e.g. Supabase) in serverless.
+      rejectUnauthorized: false
+    },
     max: 5,
     idleTimeoutMillis: 30_000,
     connectionTimeoutMillis: 5_000
