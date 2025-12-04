@@ -14,11 +14,13 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="inline-flex flex-wrap items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-[11px] font-semibold text-primary md:flex-nowrap md:gap-3 md:px-4 md:py-2 md:text-xs"
+          className="flex flex-wrap items-center gap-2"
         >
-          {t.about.highlights.map((item, idx) => (
-            <span key={item} className="flex items-center whitespace-nowrap gap-2">
-              {idx > 0 && <span aria-hidden="true">•</span>}
+          {t.about.highlights.map((item) => (
+            <span
+              key={item}
+              className="inline-flex items-center rounded-full border border-border/60 bg-background/60 px-3 py-1 text-xs text-foreground/70"
+            >
               {item}
             </span>
           ))}

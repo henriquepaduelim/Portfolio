@@ -21,8 +21,7 @@ export const en = {
     title: "About me",
     subtitle: "Builder-minded developer bridging design and engineering to deliver complete products.",
     paragraphs: [
-      "I build user-centered web apps with React, JavaScript/TypeScript, Tailwind CSS, and Python, aiming for clear interfaces and consistent performance.",
-      "I care about clean, nimble code, use AI responsibly to improve productivity, and make sure security and reporting needs are present from day one."
+      "I’m a Brazilian web developer with a strong connection to sports, data and problem-solving. My background combines a degree in Information Technology with professional experience in intelligence and investigations, which taught me to pay attention to detail, patterns and risk from the start of any project. After studying Business Communication in Canada and working in multicultural environments, I learned how to translate ideas into clear, intuitive interfaces that feel natural for users. Today, I enjoy designing and building web experiences end-to-end, always thinking about performance, usability and scalability, and focusing on digital products that solve real problems for real people."
     ],
     highlights: ["Bilingual (EN/PT)", "End-to-end delivery", "Clean UI/API delivery"]
   },

@@ -8,10 +8,12 @@ export default function AboutSection() {
 
   return (
     <Section title={t.about.title} eyebrow={t.nav.about} className="text-left">
-      <div className="mb-3 flex flex-wrap items-center gap-2 text-[12px] font-semibold text-primary md:flex-nowrap md:gap-3 md:text-[13px]">
-        {t.about.highlights.map((item, idx) => (
-          <span key={item} className="flex items-center whitespace-nowrap gap-2">
-            {idx > 0 && <span aria-hidden="true">•</span>}
+      <div className="mb-3 flex flex-wrap items-center gap-2">
+        {t.about.highlights.map((item) => (
+          <span
+            key={item}
+            className="inline-flex items-center rounded-full border border-border/60 bg-background/60 px-3 py-1 text-xs text-foreground/70"
+          >
             {item}
           </span>
         ))}

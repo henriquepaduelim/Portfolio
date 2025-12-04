@@ -21,8 +21,8 @@ export const pt = {
     title: "Sobre mim",
     subtitle: "Desenvolvedor full-stack que conecta design e engenharia para entregar produtos completos.",
     paragraphs: [
-      "Construo aplicações web centradas no usuário com React, JavaScript/TypeScript, Tailwind CSS e Python, sempre buscando interfaces claras e performance consistente.",
-      "Prezo por código limpo e ágil, uso IA de forma responsável para ganhar produtividade e garanto que requisitos de segurança e relatórios estejam presentes desde o início."
+      "Sou desenvolvedor web brasileiro com forte afinidade por esportes, dados e resolução de problemas. Minha formação em Tecnologia da Informação, aliada à experiência em inteligência e investigações, me deu uma visão analítica, focada em detalhes, padrões e riscos desde o início de cada projeto. Depois de estudar Business Communication no Canadá e atuar em ambientes multiculturais, aprendi a transformar necessidades de negócio em interfaces claras, intuitivas e UX otima. Hoje, gosto de trabalhar no desenvolvimento de aplicações web de ponta a ponta, pensando em desempenho, usabilidade e escalabilidade, sempre com o objetivo de criar produtos digitais que realmente façam diferença na rotina das pessoas."
+
     ],
     highlights: ["Bilíngue (EN/PT)", "Entrega ponta a ponta", "UI e APIs bem cuidadas"]
   },
