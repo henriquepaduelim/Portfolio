@@ -14,9 +14,14 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary"
+          className="inline-flex flex-wrap items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-[11px] font-semibold text-primary md:flex-nowrap md:gap-3 md:px-4 md:py-2 md:text-xs"
         >
-          {t.about.highlights.join(" • ")}
+          {t.about.highlights.map((item, idx) => (
+            <span key={item} className="flex items-center whitespace-nowrap gap-2">
+              {idx > 0 && <span aria-hidden="true">•</span>}
+              {item}
+            </span>
+          ))}
         </motion.div>
 
         <motion.div
@@ -26,21 +31,21 @@ export default function HeroSection() {
           className="space-y-4"
         >
           <p className="text-sm uppercase tracking-[0.2em] text-foreground/60">{t.hero.greeting}</p>
-          <h1 className="text-4xl font-semibold leading-tight md:text-5xl">
+          <h1 className="text-3xl font-semibold leading-tight md:text-5xl">
             {t.hero.name}
             <br />
             <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">
               {t.hero.title}
             </span>
           </h1>
-          <p className="max-w-2xl text-lg text-foreground/70">{t.hero.subtitle}</p>
+          <p className="max-w-2xl text-base text-foreground/70 md:text-lg">{t.hero.subtitle}</p>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
-          className="flex flex-wrap gap-4"
+          className="flex flex-wrap gap-3"
         >
           <Button href="/projects">{t.hero.primaryCta}</Button>
           <Button href="/contact" variant="secondary">
@@ -50,7 +55,7 @@ export default function HeroSection() {
       </div>
 
       <motion.div
-        className="relative flex-1"
+        className="relative flex-1 max-md:hidden"
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.15, duration: 0.65 }}

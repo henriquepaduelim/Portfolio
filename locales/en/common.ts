@@ -12,18 +12,19 @@ export const en = {
     greeting: "Hello, I'm",
     name: "Henrique Padueli",
     title: "Full-stack Developer",
-    subtitle: "I build responsive, human-friendly digital products with thoughtful UX and reliable engineering.",
+    subtitle:
+      "Bilingual, results-first developer who ships scalable, user-centered products—mixing React/TypeScript and Python to deliver clean UI, solid APIs, and reliable deploys.",
     primaryCta: "View projects",
     secondaryCta: "Get in touch"
   },
   about: {
     title: "About me",
-    subtitle: "Builder-minded developer who loves the overlap between design and engineering.",
+    subtitle: "Builder-minded developer bridging design and engineering to deliver complete products.",
     paragraphs: [
-      "I focus on delivering polished, resilient web experiences using modern tooling like Next.js, TypeScript, and Tailwind CSS.",
-      "From ideation to deployment, I enjoy shaping UI, refining UX details, and making sure performance and accessibility stay top of mind."
+      "I build user-centered web apps with React, JavaScript/TypeScript, Tailwind CSS, and Python, aiming for clear interfaces and consistent performance.",
+      "I care about clean, nimble code, use AI responsibly to improve productivity, and make sure security and reporting needs are present from day one."
     ],
-    highlights: ["Product-minded", "Systems thinker", "Team collaborator"]
+    highlights: ["Bilingual (EN/PT)", "End-to-end delivery", "Clean UI/API delivery"]
   },
   projects: {
     title: "Featured projects",

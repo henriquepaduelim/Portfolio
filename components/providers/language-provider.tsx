@@ -14,16 +14,16 @@ const STORAGE_KEY = "hp_locale";
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-function getInitialLocale(): Locale {
-  if (typeof window === "undefined") return fallbackLocale;
-  const stored = localStorage.getItem(STORAGE_KEY) as Locale | null;
-  if (stored === "en" || stored === "pt") return stored;
-  const prefersPortuguese = navigator.language?.toLowerCase().startsWith("pt");
-  return prefersPortuguese ? "pt" : fallbackLocale;
-}
-
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocale] = useState<Locale>(getInitialLocale);
+  // Start with fallback to avoid SSR/CSR mismatch; we hydrate to the real locale after mount.
+  const [locale, setLocale] = useState<Locale>(fallbackLocale);
+
+  useEffect(() => {
+    const stored = typeof window !== "undefined" ? (localStorage.getItem(STORAGE_KEY) as Locale | null) : null;
+    const prefersPortuguese = typeof navigator !== "undefined" && navigator.language?.toLowerCase().startsWith("pt");
+    const nextLocale: Locale = stored === "en" || stored === "pt" ? stored : prefersPortuguese ? "pt" : fallbackLocale;
+    setLocale((prev) => (prev !== nextLocale ? nextLocale : prev));
+  }, []);
 
   useEffect(() => {
     if (typeof document !== "undefined") {

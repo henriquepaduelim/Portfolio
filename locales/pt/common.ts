@@ -11,19 +11,20 @@ export const pt = {
   hero: {
     greeting: "Olá, me chamo",
     name: "Henrique Padueli",
-    title: "Desenvolvedor Full-stack",
-    subtitle: "Construo produtos digitais responsivos e humanos, com UX cuidadosa e engenharia confiável.",
+    title: "Desenvolvedor Full-Stack",
+    subtitle:
+      "Desenvolvedor Full-Stack bilíngue, focado em produtos escaláveis e centrados no usuário — unindo React/TypeScript e Node/Python para UI refinada, APIs sólidas e deploys confiáveis.",
     primaryCta: "Ver projetos",
     secondaryCta: "Falar comigo"
   },
   about: {
     title: "Sobre mim",
-    subtitle: "Desenvolvedor com olhar de maker que adora unir design e engenharia.",
+    subtitle: "Desenvolvedor full-stack que conecta design e engenharia para entregar produtos completos.",
     paragraphs: [
-      "Meu foco é entregar experiências web polidas e resistentes usando ferramentas modernas como Next.js, TypeScript e Tailwind CSS.",
-      "Do conceito ao deploy, gosto de desenhar UI, lapidar detalhes de UX e garantir desempenho e acessibilidade."
+      "Construo aplicações web centradas no usuário com React, JavaScript/TypeScript, Tailwind CSS e Python, sempre buscando interfaces claras e performance consistente.",
+      "Prezo por código limpo e ágil, uso IA de forma responsável para ganhar produtividade e garanto que requisitos de segurança e relatórios estejam presentes desde o início."
     ],
-    highlights: ["Visão de produto", "Pensamento sistêmico", "Colaboração em equipe"]
+    highlights: ["Bilíngue (EN/PT)", "Entrega ponta a ponta", "UI e APIs bem cuidadas"]
   },
   projects: {
     title: "Projetos em destaque",
