@@ -8,7 +8,7 @@ export default function LanguageSwitcher() {
   const t = useTranslation();
 
   return (
-    <div className="flex items-center gap-2 rounded-full border border-border/60 bg-card px-2 py-1 text-xs font-semibold uppercase tracking-wide text-foreground/70">
+    <div className="inline-flex w-fit items-center gap-1 rounded-full border border-border/60 bg-card px-1 py-1 text-xs font-semibold uppercase tracking-tight text-foreground/70">
       <button
         type="button"
         onClick={() => setLocale("en")}
@@ -29,14 +29,6 @@ export default function LanguageSwitcher() {
         )}
       >
         {t.language.pt}
-      </button>
-      <button
-        type="button"
-        aria-label={t.language.label}
-        onClick={toggleLocale}
-        className="ml-1 hidden rounded-full px-2 py-1 text-[10px] font-semibold text-foreground/50 transition hover:text-primary sm:block"
-      >
-        ↺
       </button>
     </div>
   );

@@ -15,7 +15,7 @@ export const pt = {
     subtitle:
       "Desenvolvedor Full-Stack bilíngue, focado em produtos escaláveis e centrados no usuário — unindo React/TypeScript e Node/Python para UI refinada, APIs sólidas e deploys confiáveis.",
     primaryCta: "Ver projetos",
-    secondaryCta: "Falar comigo"
+    secondaryCta: "Entrar em contato"
   },
   about: {
     title: "Sobre mim",
