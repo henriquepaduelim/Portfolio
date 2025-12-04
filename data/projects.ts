@@ -17,72 +17,60 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "nebula-analytics",
+    slug: "statcat-football-platform",
     title: {
-      en: "Nebula Analytics",
-      pt: "Nebula Analytics"
+      en: "StatCat Football Platform",
+      pt: "StatCat Football Platform"
     },
     description: {
-      en: "Analytics dashboard with real-time charts, role-based access, and custom reporting.",
-      pt: "Dashboard de analytics com gráficos em tempo real, acesso por papéis e relatórios personalizados."
+      en: "Full-stack platform for grassroots and academy clubs to onboard athletes, track combine metrics, manage teams, schedules, and content via a FastAPI/SQLModel backend and Vite React frontend.",
+      pt: "Plataforma full-stack para clubes de base e academia: onboarding de atletas, métricas de combine, gestão de equipes, agendas e conteúdo usando FastAPI/SQLModel no backend e React Vite no frontend."
     },
-    stack: ["Next.js", "TypeScript", "Tailwind", "Prisma", "PostgreSQL"],
+    stack: ["FastAPI", "SQLModel", "PostgreSQL", "React", "Vite", "TypeScript", "Tailwind", "React Query", "Zustand"],
     featured: true,
-    links: [
-      { label: "GitHub", href: "https://github.com", type: "github" },
-      { label: "Live demo", href: "https://example.com", type: "demo" }
-    ]
+    links: []
   },
   {
-    slug: "pulsecare",
+    slug: "statcat-landing-template",
     title: {
-      en: "PulseCare",
-      pt: "PulseCare"
+      en: "StatCat Landing Page Template",
+      pt: "StatCat Landing Page Template"
     },
     description: {
-      en: "Healthcare portal with patient timelines, messaging, and appointment flows.",
-      pt: "Portal de saúde com linha do tempo do paciente, mensagens e fluxo de agendamentos."
+      en: "High-conversion landing page in Next.js 14 + Tailwind with video hero, componentized sections, and centralized content/theming for fast customization.",
+      pt: "Landing page de alta conversão em Next.js 14 + Tailwind com hero em vídeo, seções componentizadas e conteúdo/tema centralizados para customização rápida."
     },
-    stack: ["Next.js", "React Query", "Tailwind", "Node.js"],
+    stack: ["Next.js", "Tailwind CSS", "TypeScript"],
     featured: true,
-    links: [
-      { label: "Case study", href: "https://example.com/case", type: "caseStudy" },
-      { label: "GitHub", href: "https://github.com", type: "github" }
-    ]
+    links: []
   },
   {
-    slug: "atlas-docs",
+    slug: "jack-scoular-portfolio",
     title: {
-      en: "Atlas Docs",
-      pt: "Atlas Docs"
+      en: "Jack Scoular Portfolio",
+      pt: "Portfólio Jack Scoular"
     },
     description: {
-      en: "Documentation platform with full-text search, versioning, and MDX authoring.",
-      pt: "Plataforma de documentação com busca, versionamento e autoria em MDX."
+      en: "Static portfolio highlighting Jack Scoular’s design work with about, projects, collaboration, and contact sections built in HTML/CSS/JS.",
+      pt: "Portfólio estático do designer Jack Scoular com seções de sobre, projetos, colaboração e contato em HTML/CSS/JS."
     },
-    stack: ["Next.js", "MDX", "Algolia", "Framer Motion"],
+    stack: ["HTML", "CSS", "JavaScript", "Playfair Display", "Google Fonts"],
     featured: false,
-    links: [
-      { label: "Live demo", href: "https://example.com", type: "demo" },
-      { label: "GitHub", href: "https://github.com", type: "github" }
-    ]
+    links: []
   },
   {
-    slug: "flow-finance",
+    slug: "gallo-classics-ecommerce",
     title: {
-      en: "Flow Finance",
-      pt: "Flow Finance"
+      en: "Gallo Classics E-commerce",
+      pt: "Gallo Classics E-commerce"
     },
     description: {
-      en: "Personal finance app with budgeting, goal tracking, and bank sync integrations.",
-      pt: "Aplicativo financeiro com orçamento, metas e integrações bancárias."
+      en: "Laravel 12 e-commerce (pt-BR) for classic soccer jerseys with seeded admin/client, catalog, cart/checkout, and full REST APIs.",
+      pt: "E-commerce em Laravel 12 (pt-BR) para camisas clássicas com admin/cliente seed, catálogo, carrinho/checkout e APIs completas."
     },
-    stack: ["Next.js", "TypeScript", "Tailwind", "Supabase"],
+    stack: ["Laravel 12", "PHP 8.2", "MySQL/PostgreSQL", "Tailwind CSS", "Vite"],
     featured: false,
-    links: [
-      { label: "GitHub", href: "https://github.com", type: "github" },
-      { label: "Live demo", href: "https://example.com", type: "demo" }
-    ]
+    links: []
   }
 ];
 

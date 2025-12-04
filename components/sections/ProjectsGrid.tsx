@@ -41,8 +41,8 @@ export default function ProjectsGrid({ featuredOnly = false }: ProjectsGridProps
               </div>
               <motion.span
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border/70 bg-background/80 text-sm font-semibold text-primary"
-                animate={{ rotate: [0, 10, 0] }}
-                transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
+                whileHover={{ x: 3 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 →
               </motion.span>

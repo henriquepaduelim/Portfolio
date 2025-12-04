@@ -4,6 +4,7 @@ import clsx from "clsx";
 import Link from "next/link";
 import { motion, type MotionProps } from "framer-motion";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
+import MouseTextEffect from "@/components/ui/MouseTextEffect";
 
 type Variant = "primary" | "secondary" | "ghost";
 
@@ -25,16 +26,23 @@ const variants: Record<Variant, string> = {
 
 export default function Button({ children, href, variant = "primary", className, ...props }: ButtonProps) {
   const classes = clsx(
-    "inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-250",
+    "inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-250 overflow-hidden",
     variants[variant],
     className
   );
+
+  const content =
+    variant === "secondary" ? (
+      <MouseTextEffect className="w-full justify-center gap-2">{children}</MouseTextEffect>
+    ) : (
+      children
+    );
 
   if (href) {
     return (
       <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
         <Link href={href} className={classes}>
-          {children}
+          {content}
         </Link>
       </motion.div>
     );
@@ -51,7 +59,7 @@ export default function Button({ children, href, variant = "primary", className,
       className={classes}
       {...motionProps}
     >
-      {children}
+      {content}
     </motion.button>
   );
 }
